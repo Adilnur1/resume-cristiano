@@ -5,7 +5,7 @@ const Layout = () => {
   return (
     <>
       <Outlet />
-      <footer>@makers2024</footer>
+      <footer>@geeks2024</footer>
     </>
   );
 };

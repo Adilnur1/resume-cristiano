@@ -1,1 +1,1 @@
-export const API = "https://rickandmortyapi.com/api/character";
+export const API = "https://pokeapi.co/api/v2/pokemon/";

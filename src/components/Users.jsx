@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { API } from "../helpers/const";
-import { Link } from "react-router-dom";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
@@ -13,12 +12,18 @@ const Users = () => {
     getUsers();
   }, []);
   return (
-    <div className="main">
-      <h1>Users Page</h1>
+    <div
+      className="main"
+      style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}
+    >
+      <center>
+        <h1>Персонажи</h1>
+      </center>
       {users.map((elem) => (
-        <Link className="li" to={`/users/${elem.id}`} key={elem.id}>
-          <h5>{elem.name}</h5>
-        </Link>
+        <div>
+          <h5 key={elem.id}>{elem.name}</h5>
+          <img width={200} height={200} src={elem.url} alt="" />
+        </div>
       ))}
     </div>
   );
